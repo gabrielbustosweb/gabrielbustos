@@ -26,7 +26,6 @@ export default function Carrusel() {
     const [duplicatedIcons, setDuplicatedIcons] = useState(icons);
 
     useEffect(() => {
-        console.log("Rutas de los iconos:", icons.map(icon => icon.src));
         setDuplicatedIcons([...icons, ...icons]);
     }, []);
 
@@ -56,6 +55,3 @@ export default function Carrusel() {
         </div>
     );
 }
-
-
-
