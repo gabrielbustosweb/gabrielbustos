@@ -11,9 +11,16 @@ export default function Header() {
 
     const { pathname } = useLocation()
     const isHome = useMemo(() => pathname === '/', [pathname])
+    const isContact = useMemo(() => pathname === '/contact', [pathname])
+
+    const headerClass = isHome
+        ? 'bg-transparent absolute top-0 left-0 right-0 z-20'
+        : isContact
+        ? 'bg-purple-500 absolute top-0 left-0 right-0 z-20 opacity-50'
+        : 'bg-slate-900';
 
     return (
-        <header className={isHome ? 'bg-transparent absolute top-0 left-0 right-0 z-20' : 'bg-slate-900'}>
+        <header className={headerClass}>
             <div className="container mx-auto px-5 py-4">
                 <div className="flex justify-between items-center">
                     <div>
