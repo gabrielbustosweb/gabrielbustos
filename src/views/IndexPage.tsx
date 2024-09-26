@@ -1,4 +1,6 @@
 import Carousel from '../components/Carrusel';
+import gabiAnime from '../assets/gabi-anime.svg';
+import bgIndex from '../assets/bg-index.mp4';
 
 export default function IndexPage() {
 
@@ -11,7 +13,7 @@ export default function IndexPage() {
           muted
           className="absolute z-0 w-full h-full object-cover opacity-90"
         >
-          <source src="/bg-index.mp4" type="video/mp4" />
+          <source src={bgIndex} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
 
@@ -35,7 +37,7 @@ export default function IndexPage() {
           </div>
         </div>
         <div className="relative z-10 w-full lg:w-1/2 py-16 px-6">
-          <img src="/gabi-anime.svg" alt="Ilustración de Gabriel Bustos" className="w-full h-auto max-w-md mx-auto" />
+          <img src={gabiAnime} alt="Ilustración de Gabriel Bustos" className="w-full h-auto max-w-md mx-auto" />
         </div>
       </div>
     </>

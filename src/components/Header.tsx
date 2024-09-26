@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { NavLink, useLocation } from 'react-router-dom';
+import logo from '../assets/logo.png';
+
 
 export default function Header() {
 
@@ -15,7 +17,7 @@ export default function Header() {
             <div className="container mx-auto px-5 py-4">
                 <div className="flex justify-between items-center">
                     <div>
-                        <img className="w-10" src="/logo.png" alt="logotipo" />
+                        <img className="w-10" src={logo} alt="logotipo" />
                     </div>
 
                     <nav className={`font-bold md:flex md:gap-4 ${isMenuOpen ? 'block' : 'hidden'} absolute md:relative top-16 md:top-0 left-0 right-0 bg-gray-900 md:bg-transparent p-4 md:p-0`}>

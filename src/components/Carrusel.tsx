@@ -1,23 +1,32 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import reactIcon from '../assets/icons/react.svg';
+import nodejsIcon from '../assets/icons/nodejs.svg';
+import postgresqlIcon from '../assets/icons/postgresql.svg';
+import typescriptIcon from '../assets/icons/typescript.svg';
+import tailwindcssIcon from '../assets/icons/tailwindcss.svg';
+import mongodbIcon from '../assets/icons/mongodb.svg';
+import nextjsIcon from '../assets/icons/nextjs.svg';
+import html5Icon from '../assets/icons/html5.svg';
+import css3Icon from '../assets/icons/css3.svg';
 
 const icons = [
-    { src: "/icons/react.svg", alt: "React" },
-    { src: "/icons/nodejs.svg", alt: "Node.js" },
-    { src: "/icons/postgresql.svg", alt: "PostgreSQL" },
-    { src: "/icons/typescript.svg", alt: "TypeScript" },
-    { src: "/icons/tailwindcss.svg", alt: "Tailwind CSS" },
-    { src: "/icons/mongodb.svg", alt: "MongoDB" },
-    { src: "/icons/NextJs.svg", alt: "Next.js" },
-    { src: "/icons/HTML5.svg", alt: "HTML5" },
-    { src: "/icons/CSS3.svg", alt: "CSS3" },
-    { src: "/icons/JavaScript.svg", alt: "JavaScript" },
+    { src: reactIcon, alt: "React" },
+    { src: nodejsIcon, alt: "Node.js" },
+    { src: postgresqlIcon, alt: "PostgreSQL" },
+    { src: typescriptIcon, alt: "TypeScript" },
+    { src: tailwindcssIcon, alt: "Tailwind CSS" },
+    { src: mongodbIcon, alt: "MongoDB" },
+    { src: nextjsIcon, alt: "Next.js" },
+    { src: html5Icon, alt: "HTML5" },
+    { src: css3Icon, alt: "CSS3" },
 ];
 
 export default function Carrusel() {
     const [duplicatedIcons, setDuplicatedIcons] = useState(icons);
 
     useEffect(() => {
+        console.log("Rutas de los iconos:", icons.map(icon => icon.src));
         setDuplicatedIcons([...icons, ...icons]);
     }, []);
 
