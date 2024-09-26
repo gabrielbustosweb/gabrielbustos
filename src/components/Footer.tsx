@@ -4,7 +4,7 @@ import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid'
 const Footer = () => {
     return (
         <footer>
-            <div className="bg-gray-300 grid grid-cols-2 ">
+            <div className="bg-gray-300 grid grid-cols-1 md:grid-cols-2 ">
                 <div className="mx-auto px-16 py-4 items-center flex gap-3">
                     <img src={perfil} alt="Perfil" className="w-16 h-16" />
                     <div className="flex flex-col">
@@ -13,7 +13,7 @@ const Footer = () => {
                         <p className="text-sm flex items-center gap-2"><EnvelopeIcon className="w-4 h-4" />gabrielbustos01@gmail.com</p>
                     </div>
                 </div>
-                <div className="flex justify-center items-center gap-3">
+                <div className="flex justify-center items-center gap-3 py-4">
                     <a
                         href="#"
                         type="button"
@@ -64,10 +64,14 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <div className="w-full bg-black/50 p-4 text-center">
-                © 2024 Copyright: {''}
-                <a href="#">Gabriel Bustos </a>
-                | Todos los derechos reservados
+            <div className="w-full bg-black/50 p-4 flex flex-col md:flex-row justify-center gap-3">
+                <div className="flex justify-center items-center gap-1">
+                    <p>© 2024 Copyright:</p><a href="#">Gabriel Bustos </a>
+                </div>
+                <span className="hidden md:block">|</span>
+                <div className="flex justify-center items-center">
+                    <p>Todos los derechos reservados</p>
+                </div>
             </div>
 
 

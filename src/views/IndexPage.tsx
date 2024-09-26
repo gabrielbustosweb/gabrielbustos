@@ -1,6 +1,7 @@
 import Carousel from '../components/Carrusel';
 import gabiAnime from '../assets/gabi-anime.svg';
 import bgIndex from '../assets/bg-index.mp4';
+import { Link } from 'react-router-dom';
 
 export default function IndexPage() {
 
@@ -11,13 +12,17 @@ export default function IndexPage() {
           autoPlay
           loop
           muted
-          className="absolute z-0 w-full h-full object-cover opacity-90"
+          className="absolute z-0 w-full h-full object-cover opacity-90 hidden md:block"
         >
           <source src={bgIndex} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
 
-        <div className="relative z-10 w-full lg:w-1/2 py-16 pl-0 lg:pl-12 ">
+        <div
+          className="absolute z-0 w-full h-full bg-cover bg-center md:hidden bg-slate-800"
+        ></div>
+
+        <div className="relative z-10 w-full lg:w-1/2 pt-32 pl-0 lg:pl-12">
           <div className="bg-gray-200 bg-opacity-30 p-8 rounded-3xl backdrop-blur-sm">
             <h1 className="text-4xl font-bold mb-4 text-amber-50">Bienvenid@ a mi sitio web</h1>
             <p className="text-xl mb-6 text-amber-50">
@@ -25,9 +30,9 @@ export default function IndexPage() {
               Te invito a que explores mis proyectos y conozcas un poco más sobre mí.
             </p>
             <div className="flex justify-center">
-              <button className="bg-indigo-500 text-white px-6 py-2 rounded-lg hover:bg-indigo-600 transition-colors">
+              <Link to="/projects" className="bg-indigo-500 text-white px-6 py-2 rounded-lg hover:bg-indigo-600 transition-colors">
                 Explora mis proyectos
-              </button>
+              </Link>
             </div>
           </div>
           <div className="mt-8 overflow-hidden">

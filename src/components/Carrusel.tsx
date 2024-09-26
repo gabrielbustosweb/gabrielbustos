@@ -14,12 +14,14 @@ import angularIcon from '../assets/icons/Angular.svg';
 import gitHubIcon from '../assets/icons/GitHub.svg';
 import kubernetesIcon from '../assets/icons/Kubernetes.svg';
 import fastapiIcon from '../assets/icons/fastapi.svg';
+import dockerIcon from '../assets/icons/Docker.svg';
 
 const icons = [
     { src: reactIcon, alt: "React" },
     { src: nodejsIcon, alt: "Node.js" },
     { src: postgresqlIcon, alt: "PostgreSQL" },
     { src: typescriptIcon, alt: "TypeScript" },
+    { src: dockerIcon, alt: "Docker" },
     { src: tailwindcssIcon, alt: "Tailwind CSS" },
     { src: mongodbIcon, alt: "MongoDB" },
     { src: nextjsIcon, alt: "Next.js" },
