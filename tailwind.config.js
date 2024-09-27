@@ -6,6 +6,15 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'secondary': '#f3e500',
+        'gbDark': '#2b2a5c',
+        'gbLight': '#dad0c0'
+      },
+      backgroundImage: {
+        'gradient-cover':
+          'linear-gradient(to right, #2b2a5c, #dad0c0)',
+      },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
@@ -19,6 +28,6 @@ export default {
         },
       },
     },
-  plugins: [],
+    plugins: [],
   }
 }
