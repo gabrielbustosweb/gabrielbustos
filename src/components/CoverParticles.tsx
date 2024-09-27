@@ -17,75 +17,78 @@ export default function CoverParticles() {
     }, []);
 
     return (
-        init && <Particles
-            id="tsparticles"
-            options={{
-                background: {
-                    color: {
-                        value: '#2b2a5c',
+        init &&
+        <div className="w-[0px]">
+            <Particles
+                id="tsparticles"
+                options={{
+                    background: {
+                        color: {
+                            value: '#2b2a5c',
+                        },
                     },
-                },
-                fpsLimit: 120,
-                interactivity: {
-                    events: {
-                        onClick: {
+                    fpsLimit: 120,
+                    interactivity: {
+                        events: {
+                            onClick: {
+                                enable: true,
+                                mode: "push",
+                            },
+                            onHover: {
+                                enable: true,
+                                mode: "repulse",
+                            }
+                        },
+                        modes: {
+                            push: {
+                                quantity: 4,
+                            },
+                            repulse: {
+                                distance: 100,
+                                duration: 0.4,
+                            },
+                        },
+                    },
+                    particles: {
+                        color: {
+                            value: "#ffffff",
+                        },
+                        links: {
+                            color: "#ffffff",
+                            distance: 150,
                             enable: true,
-                            mode: "push",
+                            opacity: 0.5,
+                            width: 1,
                         },
-                        onHover: {
+                        move: {
+                            direction: "none",
                             enable: true,
-                            mode: "repulse",
-                        }
-                    },
-                    modes: {
-                        push: {
-                            quantity: 4,
+                            outModes: {
+                                default: "bounce",
+                            },
+                            random: false,
+                            speed: 1,
+                            straight: false,
                         },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4,
+                        number: {
+                            density: {
+                                enable: true
+                            },
+                            value: 250,
+                        },
+                        opacity: {
+                            value: 0.5,
+                        },
+                        shape: {
+                            type: "circle",
+                        },
+                        size: {
+                            value: { min: 1, max: 5 },
                         },
                     },
-                },
-                particles: {
-                    color: {
-                        value: "#ffffff",
-                    },
-                    links: {
-                        color: "#ffffff",
-                        distance: 150,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 1,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
-                        random: false,
-                        speed: 1,
-                        straight: false,
-                    },
-                    number: {
-                        density: {
-                            enable: true
-                        },
-                        value: 80,
-                    },
-                    opacity: {
-                        value: 0.5,
-                    },
-                    shape: {
-                        type: "circle",
-                    },
-                    size: {
-                        value: { min: 1, max: 5 },
-                    },
-                },
-                detectRetina: true,
-            }}
-        />
+                    detectRetina: true,
+                }}
+            />
+        </div>
     )
 }

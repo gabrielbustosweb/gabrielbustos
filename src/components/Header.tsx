@@ -1,5 +1,5 @@
-import { HomeIcon, BriefcaseIcon, EnvelopeIcon, UserIcon } from '@heroicons/react/24/outline'
-import { NavLink, useLocation } from 'react-router-dom';
+import { HomeIcon, BriefcaseIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
+import { NavLink } from 'react-router-dom';
 
 
 
