@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function Header() {
 
     return (
-        <MotionTransition position="bottom" className="absolute z-40 inline-block w-full top-5 md:top-10">
+        <MotionTransition position="bottom" className="inline-block w-full top-5 md:top-10">
             <header >
             <div className="container justify-between max-w-6xl mx-auto md:flex">
                     <Link to='/'>

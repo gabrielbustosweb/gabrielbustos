@@ -8,10 +8,10 @@ import { HomeIcon, BriefcaseIcon, EnvelopeIcon } from '@heroicons/react/24/outli
 
 export default function Layout() {
     return (
-        <div className="relative min-h-screen">
+        <>
             <CoverParticles />
+            <Header />
             <div className="relative z-10">
-                <Header />
                 <MotionTransition position="right" className="fixed z-40 flex flex-col items-center justify-center w-full mt-auto bottom-10">
                     <nav className="flex items-center justify-center gap-2 px-4 py-1 rounded-full bg-white/15 backdrop-blur-sm">
                         <NavLink
@@ -38,6 +38,6 @@ export default function Layout() {
                     <Outlet />
                 </main>
             </div>
-        </div>
+        </>
     )
 }

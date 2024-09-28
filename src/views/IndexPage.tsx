@@ -6,9 +6,9 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center">
+      <div className="relative flex flex-col lg:flex-row items-center justify-center">
 
-        <div className="relative z-10 w-full lg:w-1/2 py-32 pl-0 lg:pl-12">
+        <div className=" w-full lg:w-1/2 pt-8 pl-0 lg:pl-12">
           <div className="bg-gray-200 bg-opacity-30 p-8 rounded-3xl backdrop-blur-sm">
             <h1 className="text-4xl font-bold mb-4 text-amber-50">Bienvenid@ a mi sitio web</h1>
             <p className="text-xl mb-6 text-amber-50">
